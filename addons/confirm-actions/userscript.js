@@ -20,7 +20,7 @@ export default async function ({ addon, console, msg }) {
       } else if (addon.settings.get("closingtopic") && e.target.closest("dd form button")) {
         cancelMessage = msg("closetopic");
       } else if (addon.settings.get("deletingproject") && e.target.closest(".media-trash")) {
-        cancelMessage = msg("trashproject")
+        cancelMessage = msg("trashproject");
       }
       if (cancelMessage !== null) {
         if (!confirm(cancelMessage)) {
