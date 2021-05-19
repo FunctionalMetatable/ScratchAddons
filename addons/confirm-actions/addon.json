@@ -41,6 +41,12 @@
       "type": "boolean",
       "default": false
     }
+    {
+      "name": "Confirm deleting projects",
+      "id": "deletingproject",
+      "type": "boolean",
+      "default": false
+    }
   ],
   "tags": ["community", "recommended"],
   "enabledByDefault": false,
