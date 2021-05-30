@@ -146,7 +146,7 @@ export default async function ({ addon, global, console }) {
       let selection = window.getSelection();
       let selectionStr = selection.toString();
       var quoted = "";
-      let quotedAuthor = blockpost.querySelector(".black.username").innerText
+      let quotedAuthor = blockpost.querySelector(".black.username").innerText;
       if (
         selectionStr &&
         selection.anchorNode &&
@@ -154,24 +154,24 @@ export default async function ({ addon, global, console }) {
         selection.focusNode &&
         blockpost.contains(selection.focusNode)
       )
-        quoted = getSelectionBBCode()
+        quoted = getSelectionBBCode();
       else {
         // Manually get the BBCODE
-        let postId = blockpost.id.slice(1)
-        let sourceRes = await fetch(`/discuss/post/${postId}/source`)
+        let postId = blockpost.id.slice(1);
+        let sourceRes = await fetch(`/discuss/post/${postId}/source`);
         let source = await sourceRes.text();
         quoted = source;
       }
-      
+
       if (addon.settings.get("quoted-link")) {
         quoted = `[quote=${quotedAuthor}]
         [url=https://scratch.mit.edu/discuss/post/${blockpost.id.slice(1)}][[]View Post][/url]
         ${quoted}
-        [/quote]`
-      } else quoted = `[quote=${quotedAuthor}]${quoted}[/quote]`
-      
+        [/quote]`;
+      } else quoted = `[quote=${quotedAuthor}]${quoted}[/quote]`;
+
       textarea += quoted;
-      
+
       textarea.scrollIntoView(false);
       textarea.focus();
     });
