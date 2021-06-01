@@ -1,0 +1,34 @@
+{
+  "name": "Comment Reactions",
+  "description": "Shows comment reactions. Uses potatophant.net to obtain data.",
+  "credits": [
+    {
+      "name": "potatophant",
+      "url": "https://scratch.mit.edu/users/potatophant"
+    },
+    {
+      "name": "9gr",
+      "url": "https://scratch.mit.edu/users/9gr"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "projects.js",
+      "matches": ["https://scratch.mit.edu/projects/*"]
+    }
+  ],
+  "userstyles": [
+    {
+      "url": "reactions.css",
+      "matches": ["https://scratch.mit.edu/discuss/topic/*"],
+      "settingMatch": {
+        "id": "reactions",
+        "value": true
+      }
+    }
+  ],
+  "versionAdded": "1.16.0",
+  "tags": ["profiles", "community", "studios"],
+  "enabledByDefault": false,
+  "l10n": true
+}
