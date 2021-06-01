@@ -20,11 +20,7 @@
   "userstyles": [
     {
       "url": "reactions.css",
-      "matches": ["https://scratch.mit.edu/discuss/topic/*"],
-      "settingMatch": {
-        "id": "reactions",
-        "value": true
-      }
+      "matches": ["https://scratch.mit.edu/projects/*"]
     }
   ],
   "versionAdded": "1.16.0",
