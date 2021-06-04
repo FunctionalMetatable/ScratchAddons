@@ -1,0 +1,19 @@
+{
+  "name": "Custom Project Player",
+  "description": "Choose your project player instead of using vanilla scratch.",
+  "credits": [
+    {
+      "name": "9gr",
+      "link": "https://scratch.mit.edu/users/9gr"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["https://scratch.mit.edu/projects/*"]
+    }
+  ],
+  "tags": ["projectPlayer"],
+  "enabledByDefault": false,
+  "l10n": true
+}
