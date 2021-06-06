@@ -1,19 +1,39 @@
 {
-  "name": "Forums image uploader",
-  "description": "Integrates image uploading into the forums.",
+  "name": "Image uploader",
+  "description": "Integrates image uploading into the forums and comments.",
   "credits": [
     {
       "name": "Jeffalo"
+    },
+    {
+      "name": "9gr",
+      "link": "https://scratch.mit.edu/users/9gr"
     }
   ],
   "userscripts": [
     {
       "url": "userscript.js",
       "matches": ["https://scratch.mit.edu/discuss/*"]
+    },
+    {
+      "url": "comments.js",
+      "matches": ["https://scratch.mit.edu/studios/*/comments", "https://scratch.mit.edu/projects/*", "https://scratch.mit.edu/users/*"],
+      "settingMatch": {
+        "id": "comments",
+        "value": true
+      }
     }
   ],
-  "versionAdded": "1.0.0",
+  "settings": [
+    {
+      "name": "Apply image uploader to comments",
+      "id": "comments",
+      "type": "boolean",
+      "default": true
+    },
+  ],
   "tags": ["forums", "community"],
   "enabledByDefault": false,
-  "libraries": ["md5", "text-field-edit"]
+  "libraries": ["md5", "text-field-edit"],
+  "l10n": true
 }
