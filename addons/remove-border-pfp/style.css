@@ -1,5 +1,5 @@
 .comment .avatar {
-    box-shadow: 0px 0px 0px var(--removeBorderPfp-length) var(--removeBorderPfp-color);
-    border-radius: var(--removeBorderPfp-length);
-    background-color: var(--removeBorderPfp-backgroundColor);
+  box-shadow: 0px 0px 0px var(--removeBorderPfp-length) var(--removeBorderPfp-color);
+  border-radius: var(--removeBorderPfp-length);
+  background-color: var(--removeBorderPfp-backgroundColor);
 }
