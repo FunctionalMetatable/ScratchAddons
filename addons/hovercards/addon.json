@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScratchAddons/manifest-schema/dist/schema.json",
+  "name": "Hovercards",
+  "description": "Adds the abillity to hover over a profile/project to see a preview of it.",
+  "credits": [
+    {
+      "name": "9gr",
+      "link": "https://scratch.mit.edu/users/9gr"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": [
+        "https://scratch.mit.edu/*"
+      ]
+    }
+  ],
+
+  "injectAsStyleElt": true,
+
+  "userstyles": [
+    {
+      "url": "userstyle.css",
+      "matches": [
+        "https://scratch.mit.edu/*"
+      ]
+    }
+  ],
+  "tags": ["community","projectPage"]
+}
