@@ -14,8 +14,8 @@
     );
     elements.forEach((element) => {
       element.href = element.href.replace(
-        "https://scratch.mit.edu/discuss/youtube/",
-        "https://www.youtube.com/watch?v="
+        /https:\/\/scratch.mit.edu\/discuss\/youtube\/(.*)\/,
+        "https://www.youtube.com/watch?v=$1"
       );
     });
   }
