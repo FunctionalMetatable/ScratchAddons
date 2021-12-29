@@ -6,15 +6,14 @@ export default async function runAddonUserscripts({ addonId, scripts, enabledLat
   const globalObj = Object.create(null);
   for (const scriptInfo of scripts) {
     const { url: scriptPath, runAtComplete } = scriptInfo;
-    const scriptUrl = `${new URL(import.meta.url).origin}/addons/${addonId}/${scriptPath}`;
     const loadUserscript = async () => {
       await scratchAddons.l10n.loadByAddonId(addonId);
-      const module = await import(scriptUrl);
+      const module = await import(`../addons/${addonId}/${scriptPath}.js`);
       const msg = (key, placeholders) =>
         scratchAddons.l10n.get(key.startsWith("/") ? key.slice(1) : `${addonId}/${key}`, placeholders);
       msg.locale = scratchAddons.l10n.locale;
       scratchAddons.console.logForAddon(`${addonId} [page]`)(
-        `Running ${scriptUrl}, runAtComplete: ${runAtComplete}, enabledLate: ${enabledLate}`
+        `Running ${`${new URL(import.meta.url).origin}/addons/${addonId}/${scriptPath}`}, runAtComplete: ${runAtComplete}, enabledLate: ${enabledLate}`
       );
       const localConsole = {
         log: scratchAddons.console.logForAddon(addonId),

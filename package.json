@@ -1,0 +1,24 @@
+{
+  "name": "scratchaddons",
+  "version": "1.23.",
+  "description": "All-in-one browser extension for scratch.",
+  "scripts": {
+    "dev": "rollup -cw"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScratchAddons/ScratchAddons.git"
+  },
+  "keywords": [],
+  "author": "ScratchAddons contributors",
+  "license": "GNU v3",
+  "bugs": {
+    "url": "https://github.com/ScratchAddons/ScratchAddons/issues"
+  },
+  "homepage": "https://github.com/ScratchAddons/ScratchAddons#readme",
+  "devDependencies": {
+    "@rollup/plugin-dynamic-import-vars": "^1.4.2",
+    "@rollup/plugin-json": "^4.1.0",
+    "rollup": "^2.62.0"
+  }
+}
