@@ -22,6 +22,4 @@ export default (author) => {
   return console;
 };
 
-export {
-    _realConsole as console
-}
+export { _realConsole as console };
